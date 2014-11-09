@@ -18,6 +18,10 @@ rm Vagrantfile
 cp  ../data/Vagrantfile ../boot2docker
 echo "Done !"
 
+echo "Copy the configure_docker.sh ..."
+cp ../configure_docker.sh ../boot2docker
+echo "Done !"
+
 echo "Starting the virtual box"
 vagrant up
 sleep 10
