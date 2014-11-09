@@ -1,6 +1,6 @@
 Mini-Projet ASI
 =====
-The aim of this project is to set up a virtual machine containing two containers that host a geoserver and a postgres+postgis images.
+The aim of this project is to set up a virtual machine with two containers, the first one is the data server which contains the postgres+postgis image, and the second one is the application server which contains the geoserver image .
 in this project we suppose that you have already installed Vagrant. If not, please [do it](https://www.google.com).
 If you are using Linux Debian/Ubuntu
 ==
