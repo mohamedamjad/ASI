@@ -21,7 +21,7 @@ If you are Using Windows (run_me.bat):
 - create a workspace folder: `mkdir workspace`
 - move to your workspace folder: `cd workspace`
 - clone this repository : `git clone https://github.com/mohamedamjad/ASI.git`
-- execute the run_me.bat script: `run_me.bat` (this sh script will set up a vagrant virtual machine and add the [dduportal/boot2docker V1.3.1 box](https://vagrantcloud.com/dduportal/boxes/boot2docker/versions).
+- execute the run_me.bat script: `run_me.bat` (this bat script will set up a vagrant virtual machine and add the [dduportal/boot2docker V1.3.1 box](https://vagrantcloud.com/dduportal/boxes/boot2docker/versions).
 
 Step II: pull and configure the docker containers
 ====
@@ -29,4 +29,6 @@ Step II: pull and configure the docker containers
 - Now that you are in the boot2docker, go to the vagrant mount: `cd /vagrant`
 - execute the configure_docker.sh script: `sh configure_docker.sh` (this script will create two docker containers: postgis and geoserver the first one containes the [Postgres+PostGIS image](https://registry.hub.docker.com/u/jamesbrink/postgresql/) end the second one contains the [Geoserver image](https://registry.hub.docker.com/u/kartoza/geoserver/) 
 Step III: Access to the geo-database from the pgAdmin desktop interface
+====
+Step IV: Access to the geo-database from the geoserver admin web page
 ====
