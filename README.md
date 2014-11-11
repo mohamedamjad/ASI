@@ -31,7 +31,7 @@ Step II: pull and configure the docker containers
 
 Step III: Access to the geo-database from the pgAdmin desktop interface
 ====
-Fill the connection form with the appropriate IP adress (localhost), user (postgres), Password (postgres) and forwarded port (2201) . Like the screenshot bellow
+Fill the connection form with the appropriate IP adress (localhost), user (postgres), Password (postgres) and forwarded port (2201) . Like the screenshot bellow.
 ![pgadmin3](images/pgadmin1.png)
 
 Step IV: Access to the geo-database from the geoserver admin web page
