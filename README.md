@@ -26,6 +26,7 @@ If you are Using Windows (run_me.bat):
 Step II: pull and configure the docker containers
 ====
 
-- Now that you are in the boot2docker go to the vagrant mount: `cd /vagrant`
-- execute the configure_docker.sh script: `sh configure_docker.sh` (this script will create two docker containers: postgis and geoserver the first one containes the Postgres+PostGIS image end the second one contains  
-- in a web browser -> 127.0.0.1:2207 (my 8080 port is busy, ) the GeoServer admin page will appear (it may take few minutes to start geoserver service). Log in with: login: admin; password: geoserver.
+- Now that you are in the boot2docker, go to the vagrant mount: `cd /vagrant`
+- execute the configure_docker.sh script: `sh configure_docker.sh` (this script will create two docker containers: postgis and geoserver the first one containes the [Postgres+PostGIS image](https://registry.hub.docker.com/u/jamesbrink/postgresql/) end the second one contains the [Geoserver image](https://registry.hub.docker.com/u/kartoza/geoserver/) 
+Step III: Access to the geo-database from the pgAdmin desktop interface
+====
