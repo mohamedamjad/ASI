@@ -11,7 +11,7 @@ docker run --name postgis -p 5432:5432 -d jamesbrink/postgresql
 
 echo "Configuring postgis and creating a geodatabase: spatialdb"
 docker run --link postgis:db -ti -v /vagrant:/vagrant jamesbrink/postgresql sh -c 'exec psql -h "$DB_PORT_5432_TCP_ADDR" -p "$DB_PORT_5432_TCP_PORT" -U postgres -f /vagrant/spatialdb.sql'
-docker run --link postgis:db -ti -v /vagrant:/vagrant jamesbrink/postgresql sh -c 'exec shp2pgsql -I -s 2154 /vagrant/75-.shp public.spatialdb | psql -h "$DB_PORT_5432_TCP_ADDR" -p "$DB_PORT_5432_TCP_PORT" -U postgres -d spatialdb'
+docker run --link postgis:db -ti -v /vagrant:/vagrant jamesbrink/postgresql sh -c 'exec shp2pgsql -W "LATIN1" -I -s 2154 /vagrant/shapefile/75-.shp public.spatialdb | psql -h "$DB_PORT_5432_TCP_ADDR" -p "$DB_PORT_5432_TCP_PORT" -U postgres -d spatialdb'
 
 echo "Pulling the geoserver image"
 docker pull kartoza/geoserver

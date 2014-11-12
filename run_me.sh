@@ -18,7 +18,7 @@ cp  ../data/Vagrantfile ../boot2docker
 echo "Done !"
 
 echo "Copying the docker configuration file ..."
-cp ../configure_docker.sh ../boot2docker
+cp ../script/configure_docker.sh ../boot2docker
 echo "Done !"
 
 echo "copying the shapefile folder ..."

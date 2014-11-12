@@ -27,8 +27,8 @@ Step II: pull and configure the docker containers
 ====
 
 - Now that you are in the boot2docker, go to the vagrant mount: `cd /vagrant`
-- execute the configure_docker.sh script: `sh configure_docker.sh` (this script will create two docker containers: postgis and geoserver the first one containes the [Postgres+PostGIS image](https://registry.hub.docker.com/u/jamesbrink/postgresql/) end the second one contains the [Geoserver image](https://registry.hub.docker.com/u/kartoza/geoserver/) .
-
+- execute the configure_docker.sh script: `sh configure_docker.sh` (this script will create two docker containers: postgis and geoserver the first one containes the [Postgres+PostGIS image](https://registry.hub.docker.com/u/jamesbrink/postgresql/) and the second one contains the [Geoserver image](https://registry.hub.docker.com/u/kartoza/geoserver/) .
+this script will also automatically add a shapefile to our geodatabase using the shp2pgsql plugin.
 Step III: Access to the geo-database from the pgAdmin desktop interface
 ====
 Fill the connection form with the appropriate IP adress (localhost), user (postgres), Password (postgres) and forwarded port (2201) . Like the screenshot bellow.
@@ -36,3 +36,8 @@ Fill the connection form with the appropriate IP adress (localhost), user (postg
 
 Step IV: Access to the geo-database from the geoserver admin web page
 ====
+Now we will try to vizualise our shapefile from the geoserver admin web page. First of all we need to log in into the geoserver web interface: 127.0.0.1:2207 (my 8080 port is busy).
+login: admin
+passwd: geoserver
+to connect the geoserver container with the postgis one: Entrepôt-> Ajouter un entrepôt, and fill the form like shown in the image bellow
+Now we need to publish our geodatabase: click Publier 
