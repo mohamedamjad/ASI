@@ -31,13 +31,21 @@ Step II: pull and configure the docker containers
 this script will also automatically add a shapefile to our geodatabase using the shp2pgsql plugin.
 Step III: Access to the geo-database from the pgAdmin desktop interface
 ====
-Fill the connection form with the appropriate IP adress (localhost), user (postgres), Password (postgres) and forwarded port (2201) . Like the screenshot bellow.
+- Fill the connection form with the appropriate IP adress (localhost), user (postgres), Password (postgres) and forwarded port (2201) . Like the screenshot bellow.
 ![pgadmin3](images/pgadmin1.png)
-
+- In your public schema, you can vizualise your automatically added spatialdb table.
+![pgadmin_table](images/atribute_table.png)
 Step IV: Access to the geo-database from the geoserver admin web page
 ====
-Now we will try to vizualise our shapefile from the geoserver admin web page. First of all we need to log in into the geoserver web interface: 127.0.0.1:2207 (my 8080 port is busy).
+Now we will try to vizualise our shapefile from the geoserver admin web page.
+- First of all we need to log in into the geoserver web interface: 127.0.0.1:2207 (my 8080 port is busy).
 login: admin
 passwd: geoserver
-to connect the geoserver container with the postgis one: Entrepôt-> Ajouter un entrepôt, and fill the form like shown in the image bellow
-Now we need to publish our geodatabase: click Publier 
+- to connect the geoserver container with the postgis one: Entrepôt-> Ajouter un entrepôt, and fill the form like shown in the image bellow (passwd=postgres).
+![details de connexion](images/geoserver_1.png).
+- If everything is OK, we need to publish our geodatabase: click Publier.
+![connexion réussit](images/geoserver_2.png).
+- You'll have a new form, keep the default parameters, choose : Emprise native and valdiate the form
+![emprise](images/geoserver_3.png)
+- Final step (Haaallelujah!!): Prévisualisation des couches-> click on the name of your layer and choose OpenLayers
+![shapefile](images/geoserver_5.png)
