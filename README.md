@@ -1,7 +1,7 @@
 Mini-Projet ASI
 =======
 The aim of this project is to set up a virtual machine with two containers, the first one is the data server which contains the postgres+postgis image with an automatically added shapefile layer, and the second one is the application server which contains the geoserver image.
-at the end we have to be able to see the Paris department shapefile from the geoserver web page,. The schemas below show what we are attempting to do.
+at the end we will be able to see the Paris department shapefile from the geoserver web page, and its atribute table from the pgAdmin client interface. The schemas below show what we are attempting to do.
 In this project we suppose that you have already installed Vagrant. If not, please [do it](https://docs.vagrantup.com/v2/installation/).
 
 ![Alt text](images/diagramme1.png?raw=true)
