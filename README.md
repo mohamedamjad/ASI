@@ -28,13 +28,16 @@ Step II: pull and configure the docker containers
 
 - Now that you are in the boot2docker, go to the vagrant mount: `cd /vagrant`
 - execute the configure_docker.sh script: `sh configure_docker.sh` (this script will create two docker containers: postgis and geoserver the first one containes the [Postgres+PostGIS image](https://registry.hub.docker.com/u/jamesbrink/postgresql/) and the second one contains the [Geoserver image](https://registry.hub.docker.com/u/kartoza/geoserver/) .
-this script will also automatically add a shapefile to our geodatabase using the shp2pgsql plugin.
+- this script will also automatically add a shapefile to our geodatabase using the shp2pgsql plugin.
+
 Step III: Access to the geo-database from the pgAdmin desktop interface
 ====
+
 - Fill the connection form with the appropriate IP adress (localhost), user (postgres), Password (postgres) and forwarded port (2201) . Like the screenshot bellow.
 ![pgadmin3](images/pgadmin1.png)
 - In your public schema, you can vizualise your automatically added spatialdb table.
-![pgadmin_table](images/atribute_table.png)
+![pgadmin_table](images/atribute_table.png).
+
 Step IV: Access to the geo-database from the geoserver admin web page
 ====
 Now we will try to vizualise our shapefile from the geoserver admin web page.
