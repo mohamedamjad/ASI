@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "Pulling the PostGIS image ..."
-docker pull jameblink/postgresql
+docker pull jamebrink/postgresql
 
 echo "Killing all existing containers"
 docker kill $(docker ps -a -q)
